@@ -1,6 +1,8 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { useState } from "react";
+import { Container, Row, Col, Tab, Nav, Button } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import content from "../assets/img/project/content-desaigning.jpeg";
+import content2 from "../assets/img/project/content2.png";
 import photography from "../assets/img/project/fotography.jpeg";
 import photography1 from "../assets/img/project/fotography2.jpeg";
 import photography2 from "../assets/img/project/fotography3.jpeg";
@@ -15,6 +17,12 @@ import lithan2 from "../assets/img/project/lithan2.png";
 import lithan3 from "../assets/img/project/lithan3.png";
 import lithan4 from "../assets/img/project/lithan4.png";
 import lithan5 from "../assets/img/project/lithan5.png";
+import azure1 from "../assets/img/project/azure1.png";
+import lab1ss2 from "../assets/img/project/lab1-ss2.png";
+import mod5iu3 from "../assets/img/project/mod5-iu3.png";
+import mod5iu32 from "../assets/img/project/mod5-iu3(2).png";
+import lab4ss2 from "../assets/img/project/iu4-ss2.png";
+import lab4ss1 from "../assets/img/project/iu4-ss1.png";
 import colorSharp2 from "../assets/img/sharp2.png";
 import videography from "../assets/video/videography.mp4";
 import ultahGereja from "../assets/video/ultah-gereja.mp4";
@@ -35,6 +43,13 @@ export const Projects = () => {
       year: "2019",
       description: "My design as Social Media Admin",
       imgUrl: content,
+    },
+    {
+      link: "#",
+      title: "Content Designing",
+      year: "2019",
+      description: "My design as Social Media Admin",
+      imgUrl: content2,
     },
     {
       link: "#",
@@ -173,7 +188,43 @@ export const Projects = () => {
         "Users have 5 chances to guess the name of the atomic element according to periodic table. And the output will show the user's score and show which user's answer is correct/incorrect",
       imgUrl: lithan5,
     },
+    {
+      link: "#",
+      title: "Monitor and maintain a AVD infrastructure",
+      year: "June 2023",
+      description:
+        "Prepare for scaling Azure Virtual Desktop session hosts, Create a scaling plan for Azure Virtual Desktop session hosts, Set up diagnostics to track Azure Virtual Desktop autoscaling and Verify autoscaling of Azure Virtual Desktop session hosts",
+      imgUrl: azure1,
+    },
+    {
+      link: "#",
+      title: "Managing Windows Server (1)",
+      year: "February 2023",
+      description:
+        "Implementing and using remote server administration - Configure Windows Admin Center extensions",
+      imgUrl: mod5iu3,
+    },
+    {
+      link: "#",
+      title: "Managing Windows Server (2)",
+      year: "February 2023",
+      description:
+        "Implementing and using remote server administration - Administer servers with Remote PowerShell",
+      imgUrl: mod5iu32,
+    },
+    {
+      link: "#",
+      title: "Integrate an AD DS forest with an Azure AD tenant",
+      year: "June 2023",
+      description:
+        "Create AD DS users and groups that will be synchronized to Azure AD, Configure AD DS UPN suffix,Create an Azure AD user that will be used to configure synchronization with Azure AD, Install Azure AD Connect, and Configure hybrid Azure AD join",
+      imgUrl: lab1ss2,
+    },
   ];
+
+  const [numProjects, setNumProjects] = useState(3);
+  const showMoreProjects = () => setNumProjects(photographys.length);
+  const showLessProjects = () => setNumProjects(3);
 
   return (
     <section className="project" id="projects">
@@ -218,7 +269,7 @@ export const Projects = () => {
                     >
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {photographys.map((photographys, index) => {
+                          {photographys.slice(0, numProjects).map((photographys, index) => {
                             return (
                               <ProjectCard key={index} {...photographys} />
                             );
@@ -227,7 +278,7 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <Row>
-                          {videographys.map((videographys, index) => {
+                          {videographys.slice(0, numProjects).map((videographys, index) => {
                             return (
                               <ProjectVideo key={index} {...videographys} />
                             );
@@ -236,11 +287,22 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <Row>
-                          {lithans.map((lithans, index) => {
+                          {lithans.slice(0, numProjects).map((lithans, index) => {
                             return <ProjectCard key={index} {...lithans} />;
                           })}
                         </Row>
                       </Tab.Pane>
+                      <div className="text-center">
+                          {numProjects < photographys.length ? (
+                            <Button variant="primary" onClick={showMoreProjects}>
+                              View More
+                            </Button>
+                          ) : (
+                            <Button variant="primary" onClick={showLessProjects}>
+                              View Less
+                            </Button>
+                          )}
+                        </div>
                     </Tab.Content>
                   </Tab.Container>
                 </div>
@@ -258,16 +320,32 @@ export const Projects = () => {
                   }
                 >
                   <h2 className="pt-5 mb-5">Project Explanation</h2>
-                  <div class="video-container">
-                    <iframe
-                      src="https://www.youtube.com/embed/3HPWMAQgRTQ"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                      className="video"
-                    ></iframe>
-                  </div>
+                  <Row>
+                    <Col md={6}>
+                      <div class="video-container">
+                        <iframe
+                          src="https://www.youtube.com/embed/3HPWMAQgRTQ"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen
+                          className="video"
+                        ></iframe>
+                      </div>
+                    </Col>
+                    <Col md={6}>
+                      <div class="video-container">
+                        <iframe
+                          src="https://www.youtube.com/embed/8S-Aqm_Xag0"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen
+                          className="video"
+                        ></iframe>
+                      </div>
+                    </Col>
+                  </Row>
                 </div>
               )}
             </TrackVisibility>

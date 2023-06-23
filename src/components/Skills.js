@@ -6,6 +6,16 @@ import filmora from "../assets/img/filmora.svg";
 import ligthroom from "../assets/img/lightroom.svg";
 import inshot from "../assets/img/inshot.svg";
 import davinci from "../assets/img/davinci.svg";
+import azure from "../assets/img/azure.png";
+import ppt from "../assets/img/powerpoint.png";
+import excel from "../assets/img/excel.png";
+import word from "../assets/img/word.png";
+import sway from "../assets/img/sway.png";
+import audition from "../assets/img/audition.png";
+import canva from "../assets/img/canva.png";
+import capcut from "../assets/img/capcut.png";
+import nodejs from "../assets/img/nodejs.png";
+import notepad from "../assets/img/notepad.png";
 import { motion } from "framer-motion";
 
 import "./css/Skills.css";
@@ -31,9 +41,62 @@ export const Skills = () => {
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
-              <p>Languages</p>
+              <p style={{ marginBottom:"2rem" }}>Cloud Computing & Microsoft</p>
               <Row className="text-center">
+              <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 10 }}
+                  >
+                     <img src={azure} alt="Logo" style={imgicon} /> <br />
+                    Microsoft Azure
+                  </motion.div>
+                </Col>
                 <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                     <img src={ppt} alt="Logo" style={imgicon} /> <br />
+                    PowerPoint
+                  </motion.div>
+                </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                     <img src={excel} alt="Logo" style={imgicon} /> <br />
+                    Excel
+                  </motion.div>
+                </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                     <img src={word} alt="Logo" style={imgicon} /> <br />
+                    Word
+                  </motion.div>
+                </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                     <img src={sway} alt="Logo" style={imgicon} /> <br />
+                    Sway
+                  </motion.div>
+                </Col>
+              </Row>
+              <Row>
+              <p style={{ marginTop: "3rem",marginBottom:"2rem" }}>Programming Language</p>
+              <Col style={coloumn}>
                   <motion.div
                     className="pointer"
                     whileHover={{ scale: 1.1 }}
@@ -75,7 +138,6 @@ export const Skills = () => {
                     C++
                   </motion.div>
                 </Col>
-
                 <Col style={coloumn}>
                   <motion.div
                     className="pointer"
@@ -98,7 +160,7 @@ export const Skills = () => {
                   </motion.div>
                 </Col>
               </Row>
-              <p style={{ marginTop: "3rem" }}>Application Software</p>
+              <p style={{ marginTop: "3rem",marginBottom:"2rem" }}>Programming Platform</p>
               <Row>
                 <Col style={coloumn}>
                   <motion.div
@@ -116,6 +178,61 @@ export const Skills = () => {
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
+                    <img src={sublimeText} alt="Logo" style={imgicon} /> <br />
+                    Sublime Text
+                  </motion.div>
+                </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <i class="devicon-jupyter-plain" style={icons}></i> <br />
+                    Jupyter Notebook
+                  </motion.div>
+                </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <i class="devicon-vscode-plain" style={icons}></i>
+                    <br />
+                    Visual Studio Code
+                  </motion.div>
+                </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                     <img src={nodejs} alt="Logo" style={imgicon} /> <br />
+                    Node.js
+                  </motion.div>
+                </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <img src={notepad} alt="Logo" style={imgicon} /> <br />
+                    Notepad++
+                  </motion.div>
+              </Col>
+              </Row>
+              <p style={{ marginTop: "3rem", marginBottom : "2rem"}}>Editing</p>
+              <Row>
+            
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
                     <img src={davinci} alt="Logo" style={imgicon} /> <br />
                     Davinci
                   </motion.div>
@@ -127,7 +244,7 @@ export const Skills = () => {
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
                     <i class="devicon-photoshop-plain" style={icons}></i> <br />
-                    Photoshop
+                    Adobe Photoshop
                   </motion.div>
                 </Col>
                 <Col style={coloumn}>
@@ -138,7 +255,17 @@ export const Skills = () => {
                   >
                     <i class="devicon-premierepro-plain" style={icons}></i>{" "}
                     <br />
-                    Premiere Pro
+                    Adobe Premiere Pro
+                  </motion.div>
+                </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <img src={audition} alt="Logo" style={imgicon} /> <br />
+                    Adobe Audition
                   </motion.div>
                 </Col>
                 <Col style={coloumn}>
@@ -151,16 +278,7 @@ export const Skills = () => {
                     Ligthroom
                   </motion.div>
                 </Col>
-                <Col style={coloumn}>
-                  <motion.div
-                    className="pointer"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  >
-                    <img src={sublimeText} alt="Logo" style={imgicon} /> <br />
-                    Sublime Text
-                  </motion.div>
-                </Col>
+                
                 <Col style={coloumn}>
                   <motion.div
                     className="pointer"
@@ -181,28 +299,28 @@ export const Skills = () => {
                     Inshot
                   </motion.div>
                 </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <img src={capcut} alt="Logo" style={imgicon} /> <br />
+                    Capcut
+                  </motion.div>
+                </Col>
+                <Col style={coloumn}>
+                  <motion.div
+                    className="pointer"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <img src={canva} alt="Logo" style={imgicon} /> <br />
+                    Canva
+                  </motion.div>
+                </Col>
 
-                <Col style={coloumn}>
-                  <motion.div
-                    className="pointer"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  >
-                    <i class="devicon-jupyter-plain" style={icons}></i> <br />
-                    Jupyter
-                  </motion.div>
-                </Col>
-                <Col style={coloumn}>
-                  <motion.div
-                    className="pointer"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  >
-                    <i class="devicon-vscode-plain" style={icons}></i>
-                    <br />
-                    Visual Studio Code
-                  </motion.div>
-                </Col>
+                
               </Row>
             </div>
           </div>

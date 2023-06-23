@@ -1,6 +1,6 @@
 .footer {
     padding: 0 0 50px 0;
-    background: linear-gradient(90deg, rgba(19, 48, 80, 1) 0%, rgba(3, 19, 49, 1) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(13, 13, 13) 100%);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 .new-email-bx::before {
     content: "";
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(90.21deg, #000000 -5.91%, #0a0a0a 111.58%);
     border-radius: 20px;
     position: absolute;
     z-index: -1;

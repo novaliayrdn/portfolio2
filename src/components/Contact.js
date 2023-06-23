@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { MdEmail, MdLocationPin } from "react-icons/md";
@@ -53,26 +52,23 @@ export const Contact = () => {
   return (
     <section className="contact" id="contact">
       <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <img
-                  className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
-                  }
-                  src={contactImg}
-                  alt="Contact Us"
-                />
-              )}
-            </TrackVisibility>
-          </Col>
-          <Col size={12} md={6}>
+        <Row>
+          {/*<Col md={6}>
+            <iframe
+              width="100%"
+              height="450"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+  </Col> */}
+          <Col md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
+                    isVisible ? "animate_animated animate_fadeIn" : ""
                   }
                 >
                   <h2>Contact Me</h2>
@@ -88,7 +84,7 @@ export const Contact = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Jimbaran Asri Residence, South Kuta, Bali, 80361
+                      Bali, Indonesia 80361
                     </a>
                   </div>
 

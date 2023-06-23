@@ -59,6 +59,7 @@ export const NavBar = () => {
               >
                 Education
               </Nav.Link>
+    
               <Nav.Link
                 href="#skills"
                 className={
@@ -67,6 +68,15 @@ export const NavBar = () => {
                 onClick={() => onUpdateActiveLink("skills")}
               >
                 Skills
+              </Nav.Link>
+              <Nav.Link
+                href="#what-i-do"
+                className={
+                  activeLink === "what-i-do" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("what-i-do")}
+              >
+                What I do?
               </Nav.Link>
               <Nav.Link
                 href="#projects"
@@ -90,8 +100,19 @@ export const NavBar = () => {
               >
                 Contact
               </Nav.Link>
+              <Nav.Link
+                href="#contact"
+                className={
+                  activeLink === "contact"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("contact")}
+              >
+                Video Introduction
+              </Nav.Link>
             </Nav>
-            <span className="navbar-text">
+              <span className="navbar-text">
               <a className="vvd" href={cv} target="_blank" rel="noreferrer">
                 <span>Download CV</span>
               </a>

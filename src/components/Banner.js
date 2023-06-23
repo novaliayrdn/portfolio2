@@ -16,8 +16,8 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Editor"];
-  const period = 2000;
+  const toRotate = ["Web Developer", "Cloud Engineer", "Editor"];
+  const period = 1000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -69,25 +69,26 @@ export const Banner = () => {
                   }
                 >
                   <span className="tagline">
-                    Hi! I'm Novalia Yordan Theofani
+                    Hi! I'm Novalia Yordan
                   </span>
                   <h1>
                     {`I'm`}{" "}
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Editor" ]'
+                      data-rotate='[ "Web Developer", "Cloud Engineer", "Editor" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <span>About Me</span>
-                  <p>
-                    Hi, im Nova! I am a student from Stikom Bali University,
-                    majoring in Digital System Administration. I also graduated
-                    in Software Engineering when I was in high school. And in
-                    addition, I also studied photo or video editing because my
-                    hobbies are photography and videography
+                  <h3>About Me</h3>
+                  <p style={{ marginBottom:"2rem" }}>
+                  Hi, I'm Ni Made Novalia Yordan Theofani or usually called Nova.
+                  I am 21 years old.
+                  I am a student from Stikom Bali University, majoring in Information Systems and I am also a student from Lithan EduclasS majoring in Digital System Administration.
+                  I am a graduate of Software Engineering when I was in high school.
+                  </p>
+                  <p style={{ marginTop:"2rem" }}>Apart from that, I also learned photo or video editing because my hobbies are photography and videography
                   </p>
                 </div>
               )}
